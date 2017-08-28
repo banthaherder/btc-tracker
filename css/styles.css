@@ -7,8 +7,19 @@ body {
 .card {
   margin-bottom: 16px;
 }
+iframe{
+  width: 100%;
+  min-height: 500px;
+  border-top: #FFD54F 5px dotted;
+  border-right: #FFD54F 5px dotted;
+  border-left: #FFD54F 5px dotted;
+  border-bottom: #FFD54F 5px dotted;
+  padding: 10px;
+  margin: 10px;
+}
 .bg-amber {
   background-color: #263238;
+
 }
 .active {
   border-radius: 0 !important;
