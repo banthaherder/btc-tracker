@@ -1,9 +1,13 @@
+body {
+  /*background: #E8F5E9;*/
+}
 .bg-amber {
-  background-color: #37474F;
+  background-color: #263238;
 }
 .active {
   height: 100%;
-  background-color: #b71c1c !important;
+  background-color: #FFC107 !important;
+  color: #263238 !important;
 }
 .nav-item {
   color: #FAF8F2;
@@ -12,5 +16,6 @@
 }
 .nav-item:hover {
   cursor: pointer;
-  background-color: #C54949;
+  background-color: #FFD54F;
+  color: #263238 !important;
 }
