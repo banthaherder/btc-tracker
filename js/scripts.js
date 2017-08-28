@@ -6,7 +6,7 @@ var getCurrentBtcData = function() {
   // Uses jQuery GET method to retrieve the btc data
   $.getJSON("https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD", function(data) {
     currentBtcData = data;
-    $("#btc-price").text("1 BTC = $" + currentBtcData.last);
+    $("#btc-price").text(currentBtcData.last);
   })
 };
 

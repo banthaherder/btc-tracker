@@ -6,6 +6,7 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee|Ubuntu:700" rel="stylesheet">
     <title>BTC Tracker</title>
   </head>
   <body>
@@ -29,8 +30,12 @@
         <div class="col-lg-12" id="home">
           <div class="row">
             <div class="col-lg-12">
-              <div class="card" id="btc-price">
-                <!-- COME BACK AND STYLE ME -->
+              <div class="card">
+                <div class="card-body">
+                  <div>
+                    <p id="price-header">BTC = $<span id="btc-price"></span></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -50,6 +55,16 @@
                     <p>
                       Bitcoin mining is the process of having a computers hardware complete complex mathmatical calculations for the block chain that helps confirms transactions and also acts as security. When calculations are completed people whos machine complteted the calculation will be rewarded in transaction fees they helped confirm as well as newly mined Bitcoins. Mining is a highly competitve market and requires a lot of power and high preforming hardware to complete calculations.
                     </p>
+                </div>
+              </div>
+              <div class="card bg-light" id="youtube">
+                <div class="card-body">
+                  <h3 class="card-title">More information</h3>
+                  <p>
+                    Learn more about Bitcoin and Bitcoin mining:
+                  </p>
+                  <iframe src="https://www.youtube.com/embed/Gc2en3nHxA4" frameborder="0" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/GmOzih6I1zs" frameborder="0" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
