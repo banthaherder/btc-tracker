@@ -9,6 +9,6 @@ function displayLastPrice() {
 }
 //UI Logic
 $(document).ready(function() {
-  //This will evenually call a function in the business logic:
+  //This will call currentPrice from backend:
   $("#btc-price").text(currentPrice);
 });
