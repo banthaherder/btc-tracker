@@ -1,12 +1,16 @@
 body {
   background: #CFD8DC;
 }
+
 .nav {
   margin-bottom: 16px;
+  font-family: 'Ubuntu', sans-serif;
 }
 .card {
   margin-bottom: 16px;
+  font-family: 'ABeeZee', sans-serif;
 }
+
 iframe{
   width: 100%;
   min-height: 500px;
