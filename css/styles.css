@@ -1,0 +1,16 @@
+.bg-amber {
+  background-color: #37474F;
+}
+.active {
+  height: 100%;
+  background-color: #b71c1c !important;
+}
+.nav-item {
+  color: #FAF8F2;
+  font-size: 50px;
+  height: 100px;
+}
+.nav-item:hover {
+  cursor: pointer;
+  background-color: #C54949;
+}
