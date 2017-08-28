@@ -7,15 +7,18 @@
     <script src="js/scripts.js"></script>
     <title>BTC Tracker</title>
   </head>
-  <body onload="getCurrentBtcData()">
+  <body>
     <ul class="nav nav-pills bg-amber">
       <div class="container">
         <div class="row nav-fill">
           <li class="nav-item">
-            <p class="nav-link active logo" id="home">BTC Tracker</p>
+            <p class="nav-link active" id="home">BTC Tracker</p>
           </li>
           <li class="nav-item">
             <p class="nav-link" id="graph">Graph</p>
+          </li>
+          <li class="nav-item">
+            <p class="nav-link" id="calculator">Calculator</p>
           </li>
         </div>
       </div>
@@ -32,21 +35,21 @@
           </div>
           <div class="row">
             <div class="col-lg-12">
-              <div class="card" id="about">
-                <h3>What is Bitcoin?</h3>
-                <p>
-                  Bitcoin is a crytocurrency and electronic payment system that can be used to purchase goods and services anywhere in the world. Cryptocurrency allows Bitcoins to be a secure transaction medium as well as regulating the creation of additional coins to the market. One of the most important aspects of Bitcoins or other crytocurrencies is that it is completely decentralized. The system relies on other Bitcoin holders. The more coins mined and held, the higher the price of the coin as its scarcity increases. However, if a large holder of coins was to sell them then they would effectively devalue the currency.
-                </p>
-                </br>
-                <h3>Block chain</h3>
-                <p>
-                  The block chain is essentially the Bitcoin holders balance. It's a large shared public ledger that records all confirmed transactions. This information is shared between all Bitcoin holders and helps to verify the validity of transactions and help prevent double-spending(fraudlent spending involving two different recipients at the same time).
-                </p>
-                <h3>Mining</h3>
+              <div class="card bg-light" id="about">
+                <div class="card-body">
+                  <h3 class="card-title">What is Bitcoin</h3>
                   <p>
-                    Bitcoin mining is the process of having a computers hardware complete complex mathmatical calculations for the block chain that helps confirms transactions and also acts as security. When calculations are completed people whos machine complteted the calculation will be rewarded in transaction fees they helped confirm as well as newly mined Bitcoins. Mining is a highly competitve market and requires a lot of power and high preforming hardware to complete calculations.
+                    Bitcoin is a crytocurrency and electronic payment system that can be used to purchase goods and services anywhere in the world. Cryptocurrency allows Bitcoins to be a secure transaction medium as well as regulating the creation of additional coins to the market. One of the most important aspects of Bitcoins or other crytocurrencies is that it is completely decentralized. The system relies on other Bitcoin holders. The more coins mined and held, the higher the price of the coin as its scarcity increases. However, if a large holder of coins was to sell them then they would effectively devalue the currency.
                   </p>
-                  <!-- COME BACK AND ADD CONTENT -->
+                  <h3 class="card-title">Block chain</h3>
+                  <p>
+                    The block chain is essentially the Bitcoin holders balance. It's a large shared public ledger that records all confirmed transactions. This information is shared between all Bitcoin holders and helps to verify the validity of transactions and help prevent double-spending(fraudlent spending involving two different recipients at the same time).
+                  </p>
+                  <h3 class="card-title">Mining</h3>
+                    <p>
+                      Bitcoin mining is the process of having a computers hardware complete complex mathmatical calculations for the block chain that helps confirms transactions and also acts as security. When calculations are completed people whos machine complteted the calculation will be rewarded in transaction fees they helped confirm as well as newly mined Bitcoins. Mining is a highly competitve market and requires a lot of power and high preforming hardware to complete calculations.
+                    </p>
+                </div>
               </div>
             </div>
           </div>
