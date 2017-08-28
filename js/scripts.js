@@ -10,5 +10,5 @@ function displayLastPrice() {
 //UI Logic
 $(document).ready(function() {
   //This will evenually call a function in the business logic:
-  $("#btc-price").text(displayLastPrice());
+  $("#btc-price").text(currentPrice);
 });
