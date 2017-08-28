@@ -1,10 +1,17 @@
 body {
-  /*background: #E8F5E9;*/
+  background: #CFD8DC;
+}
+.nav {
+  margin-bottom: 16px;
+}
+.card {
+  margin-bottom: 16px;
 }
 .bg-amber {
   background-color: #263238;
 }
 .active {
+  border-radius: 0 !important;
   height: 100%;
   background-color: #FFC107 !important;
   color: #263238 !important;
@@ -18,4 +25,12 @@ body {
   cursor: pointer;
   background-color: #FFD54F;
   color: #263238 !important;
+}
+.nav-pills .nav-link-active {
+  border-radius: 0 !important;
+}
+#price-header {
+  font-size: 65px;
+  text-align: center;
+  margin-bottom: 0px;
 }
