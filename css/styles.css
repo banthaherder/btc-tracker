@@ -1,7 +1,13 @@
 body {
   background: #CFD8DC;
 }
-
+iframe{
+  width: 100%;
+  min-height: 500px;
+  border: #FFD54F 5px dotted;
+  padding: 10px;
+  margin: 10px;
+}
 .nav {
   margin-bottom: 16px;
   font-family: 'Ubuntu', sans-serif;
@@ -9,14 +15,6 @@ body {
 .card {
   margin-bottom: 16px;
   font-family: 'ABeeZee', sans-serif;
-}
-
-iframe{
-  width: 100%;
-  min-height: 500px;
-  border: #FFD54F 5px dotted;
-  padding: 10px;
-  margin: 10px;
 }
 .bg-amber {
   background-color: #263238;
@@ -40,6 +38,9 @@ iframe{
 }
 .nav-pills .nav-link-active {
   border-radius: 0 !important;
+}
+#price-converter-swapped {
+  display: none;
 }
 #price-header {
   font-size: 65px;
