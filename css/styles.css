@@ -10,6 +10,13 @@ body {
   margin-bottom: 16px;
   font-family: 'ABeeZee', sans-serif;
 }
+#map iframe{
+  border: none;
+  width: 98%;
+  min-height: 500px;
+  padding: 10px;
+  margin: 10px;
+}
 
 iframe{
   width: 100%;
@@ -48,4 +55,11 @@ iframe{
 }
 #converter {
   display: none;
+}
+input{
+  float: left;
+}
+
+#lossGainButton{
+  margin-top: 17px;
 }
