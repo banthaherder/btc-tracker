@@ -10,6 +10,7 @@
     <title>BTC Tracker</title>
   </head>
   <body>
+    <!-- NAVBAR -->
     <ul class="nav nav-pills bg-amber">
       <div class="container">
         <div class="row nav-fill">
@@ -25,10 +26,13 @@
         </div>
       </div>
     </ul>
+    <!-- WHOLE PAGE CONTAINER-ROW -->
     <div class="container">
       <div class="row">
+        <!-- HOME ROW=COLUMN -->
         <div class="col-lg-12" id="home">
           <div class="row">
+            <!-- BTC PRICE TICKER CARD-COLUMN -->
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-body">
@@ -39,19 +43,26 @@
               </div>
             </div>
           </div>
+          <!-- PORTFOLIO ROW -->
           <div class ="row">
-            <div class="portfolioDisplay">
-              <form id="newPortfolio" class ="form-group">
-                <input type="text" id="newPortfolioName" class="form-control">
-                <button type ="submit" class="btn btn-success">New Portfolio</button>
-              </form>
+            <div class="col-lg-12">
+              <div class="portfolioDisplay">
+                <form id="newPortfolio" class ="form-group">
+                  <div class="form-group">
+                    <input type="text" id="newPortfolioName" class="form-control">
+                  </div>
+                  <button type ="submit" class="btn btn-success">New Portfolio</button>
+                </form>
               <p id="portfolioName"></p>
-            <div id="comparisonDisplay">
-              <p id="lossGain"></p>
-              <button class="btn btn-success" id="lossGainButton">Update loss/gain</button>
-              <canvas id="portfolioChart" width="100%" height="100%"></canvas>
+              </div>
+              <div id="comparisonDisplay">
+                <p id="lossGain"></p>
+                <button class="btn btn-success" id="lossGainButton">Update loss/gain</button>
+                <canvas id="portfolioChart" width="100%" height="100%"></canvas>
+              </div>
             </div>
           </div>
+          <!-- WHAT IS BITCOIN -->
           <div class="row">
             <div class="col-lg-12">
               <div class="card bg-light" id="about">
@@ -60,16 +71,17 @@
                   <p class="about">
                     Bitcoin is a crytocurrency and electronic payment system that can be used to purchase goods and services anywhere in the world. Cryptocurrency allows Bitcoins to be a secure transaction medium as well as regulating the creation of additional coins to the market. One of the most important aspects of Bitcoins or other crytocurrencies is that it is completely decentralized. The system relies on other Bitcoin holders. The more coins mined and held, the higher the price of the coin as its scarcity increases. However, if a large holder of coins was to sell them then they would effectively devalue the currency.
                   </p>
-                  <h3 class="card-title link" id="blockChain">Block chain</h3>
+                  <h3 class="card-title link" id="blockChain">Blockchain</h3>
                   <p class="blockChain">
-                    The block chain is essentially the Bitcoin holders balance. It's a large shared public ledger that records all confirmed transactions. This information is shared between all Bitcoin holders and helps to verify the validity of transactions and help prevent double-spending(fraudlent spending involving two different recipients at the same time).
+                    The blockchain is essentially the Bitcoin holders balance. It's a large shared public ledger that records all confirmed transactions. This information is shared between all Bitcoin holders and helps to verify the validity of transactions and help prevent double-spending(fraudlent spending involving two different recipients at the same time).
                   </p>
                   <h3 class="card-title link" id="mining">Mining</h3>
                     <p class="mining">
-                      Bitcoin mining is the process of having a computers hardware complete complex mathmatical calculations for the block chain that helps confirms transactions and also acts as security. When calculations are completed people whos machine completed the calculation will be rewarded in transaction fees they helped confirm as well as newly mined Bitcoins. Mining is a highly competitve market and requires a lot of power and high preforming hardware to complete calculations.
+                      Bitcoin mining is the process of having a computers hardware complete complex mathmatical calculations for the blockchain that helps confirms transactions and also acts as security. When calculations are completed people whos machine completed the calculation will be rewarded in transaction fees they helped confirm as well as newly mined Bitcoins. Mining is a highly competitve market and requires a lot of power and high preforming hardware to complete calculations.
                     </p>
                 </div>
               </div>
+              <!-- VIDEO -->
               <div class="card bg-light" id="youtube">
                 <div class="card-body">
                   <h3 class="card-title">More information</h3>
@@ -92,6 +104,7 @@
             </div>
           </div>
         </div>
+        <!-- PRICE CONVERTER -->
         <div class="col-lg-12" id="converter">
           <div class="row">
             <div class="col-lg-12">
@@ -135,6 +148,7 @@
             </div>
           </div>
         </div>
+        <!-- PRICE GRAPH -->
         <div class="col-lg-12" id="graph">
           <div class="row">
             <div class="col-lg-12">
