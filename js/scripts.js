@@ -42,4 +42,12 @@ $(document).ready(function() {
     getCurrentBtcData();
   });
 
+  $("#converter-link").click(function(){
+    $("#home").hide();
+    $("#converter").show();
+  });
+  $("#home-link").click(function(){
+    $("#converter").hide();
+    $("#home").show();
+  });
 });

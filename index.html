@@ -14,13 +14,13 @@
       <div class="container">
         <div class="row nav-fill">
           <li class="nav-item">
-            <p class="nav-link active" id="home">BTC Tracker</p>
+            <p class="nav-link active" id="home-link">BTC Tracker</p>
           </li>
           <li class="nav-item">
-            <p class="nav-link" id="graph">Graph</p>
+            <p class="nav-link" id="graph-link">Graph</p>
           </li>
           <li class="nav-item">
-            <p class="nav-link" id="calculator">Calculator</p>
+            <p class="nav-link" id="converter-link">Calculator</p>
           </li>
         </div>
       </div>
@@ -78,6 +78,33 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-12" id="converter">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div>
+                    <h1>USD to BTC Convert</h1>
+                    <form id="price-converter">
+                      <div class="form-group row">
+                        <label for="btc" class="col-sm-2 col-form-label">Bitcon:</label>
+                        <div class="col-sm-10">
+                          <input type="text" id="btc" class="form-control" placeholder="BTC">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="btc" class="col-sm-2 col-form-label">USD:</label>
+                        <div class="col-sm-10">
+                          <input type="text" id="usd" class="form-control" placeholder="USD">
+                        </div>
+                      </div>
+                      <button class="btn btn-warning" type="submit">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </body>
