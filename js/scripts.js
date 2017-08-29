@@ -119,6 +119,7 @@ $(document).ready(function() {
     $("#graph").show();
   });
   $("#home-link").click(function() {
+    $("#graph").hide();
     $("#converter").hide();
     $("#home").show();
   });
