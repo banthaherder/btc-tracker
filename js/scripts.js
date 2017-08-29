@@ -1,13 +1,12 @@
 //Busniness logic
-var url = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD';
 var currentBtcData;
 var monthlyBtcData;
 
 var getCurrentBtcData = function() {
   // Uses jQuery GET method to retrieve the btc data
-  $.getJSON("https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD", function(data) {
+  $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD", function(data) {
     currentBtcData = data;
-    $("#btc-price").text(currentBtcData.last);
+    $("#btc-price").text(data.USD);
   })
 };
 var getMonthlyBtcData = function() {
@@ -20,12 +19,13 @@ var getMonthlyBtcData = function() {
 var historicBtcGraph = function() {
   var times = [];
   var averages = [];
-  $.getJSON("https://apiv2.bitcoinaverage.com/indices/global/history/BTCUSD?period=monthly&?format=json", function(data) {
-    monthlyBtcData = data;
+  $.getJSON("https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=100&e=CCCAGG", function(data) {
+    monthlyBtcData = data["Data"];
     // console.log(data[0].average);
-    $.each(data, function(key, value){
-      times.push(value.time);
-      averages.push(value.average);
+    $.each(data["Data"], function(key, value){
+      date = new Date(value.time * 1000);
+      times.push(date.toDateString());
+      averages.push(value.close);
     });
     // console.log(data[0].time);
     // Add a helper to format timestamp data
@@ -34,10 +34,10 @@ var historicBtcGraph = function() {
     var myChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: times.reverse(),
+        labels: times,
         datasets: [{
           label: 'Bitcoin Price',
-          data: averages.reverse(),
+          data: averages,
           backgroundColor: [
           '#263238'
         ],
@@ -64,7 +64,7 @@ var times = [];
 var portfolioBtcGraph = function() {
   var date = Date.now();
       times.push(date);
-      values.push(currentBtcData.last);
+      values.push(currentBtcData.USD);
 
     // console.log(data[0].time);
     // Add a helper to format timestamp data
@@ -115,14 +115,14 @@ $(document).ready(function() {
   $("#newPortfolio").submit(function(event) {
     event.preventDefault();
     getCurrentBtcData();
-    var newPortfolio = new Portfolio ($("#newPortfolioName").val(), currentBtcData.last, currentBtcData.last);
+    var newPortfolio = new Portfolio ($("#newPortfolioName").val(), currentBtcData.USD, currentBtcData.USD);
     $("#portfolioName").append($("#newPortfolioName").val() +  " bought bitcoin at " + newPortfolio.initialValue);
     $("#comparisonDisplay").show();
     $("#portfolioChart").show();
     $("#lossGainButton").last().click(function() {
       getCurrentBtcData();
-      newPortfolio.currentValueArray.push(currentBtcData.last);
-      $("#lossGain").text(newPortfolio.name + " loss/gain: "+ (currentBtcData.last - newPortfolio.initialValue).toFixed(4));
+      newPortfolio.currentValueArray.push(currentBtcData.USD);
+      $("#lossGain").text(newPortfolio.name + " loss/gain: "+ (currentBtcData.USD - newPortfolio.initialValue).toFixed(4));
       portfolioBtcGraph();
     })
   });
@@ -142,7 +142,7 @@ $(document).ready(function() {
 
     $("#convert").click(function() {
       var usd = $("#usd").val();
-      $("#btc").val((usd/currentBtcData.last).toFixed(8));
+      $("#btc").val((usd/currentBtcData.USD).toFixed(8));
     });
     $("#swap").click(function() {
       // Kind of redunant. If anyone has a better way to clear form fields!
@@ -156,7 +156,7 @@ $(document).ready(function() {
 
       $("#convert").click(function() {
         var btc = $("#btc2").val();
-        $("#usd2").val((currentBtcData.last * btc).toFixed(2));
+        $("#usd2").val((currentBtcData.USD * btc).toFixed(2));
       });
     });
   });
