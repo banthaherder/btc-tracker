@@ -61,9 +61,13 @@ var historicBtcGraph = function() {
 };
 
 //Portfolio stuff
-function Portfolio(name, initialValue) {
+function Portfolio(name, initialValue, currentValue) {
   this.name = name;
   this.initialValue = initialValue;
+  this.currentValueArray = [];
+}
+Portfolio.prototype.array = function(currentValue) {
+  this.currentValueArray.push(currentValue)
 }
 
 //UI Logic
@@ -72,11 +76,15 @@ $(document).ready(function() {
   $("#newPortfolio").submit(function(event) {
     event.preventDefault();
     getCurrentBtcData();
-    var newPortfolio = new Portfolio ($("#newPortfolioName").val(), currentBtcData.last);
+    var newPortfolio = new Portfolio ($("#newPortfolioName").val(), currentBtcData.last, currentBtcData.last);
     $(".portfolioDisplay").append($("#newPortfolioName").val() +  "bought bitcoin at " + newPortfolio.initialValue);
+    $(".comparisonDisplay").show();
+
     $("#lossGainButton").last().click(function() {
       getCurrentBtcData();
+      newPortfolio.currentValueArray.push(currentBtcData.last);
       $(".comparisonDisplay").append(newPortfolio.name + " loss/gain: "+ (currentBtcData.last - newPortfolio.initialValue).toFixed(4));
+      alert(newPortfolio.currentValueArray)
     })
   });
   //End Portfolio stuff

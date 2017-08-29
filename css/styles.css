@@ -76,3 +76,7 @@ input{
 #lossGainButton{
   margin-top: 17px;
 }
+
+.comparisonDisplay {
+  display:none;
+}
