@@ -10,8 +10,11 @@ var getCurrentBtcData = function() {
   })
 };
 //Portfolio stuff
-
-var btcPrices = ["fakePrice1", "fakePrice2", "fakePrice3"];
+function Portfolio(name, initialValue) {
+  this.name = name;
+  this.initialValue = initialValue;
+}
+// var btcPrices = ["fakePrice1", "fakePrice2", "fakePrice3"];
 
 // function displayLastPrice() {
 //   for (i = 0; i<btcPrices.length; ++i) {
@@ -23,14 +26,14 @@ var btcPrices = ["fakePrice1", "fakePrice2", "fakePrice3"];
 //UI Logic
 $(document).ready(function() {
 //Portfolio stuff
-  $("#portfolioButton").click(function(){
+  $("#newPortfolio").submit(function(event){
+    event.preventDefault();
     getCurrentBtcData();
-    var initialValue = currentBtcData.last;
-    $(".portfolioDisplay").append("Aaron bought bitcoin at " + initialValue);
-    $("#lossGainButton").click(function() {
+    var newPortfolio = new Portfolio ($("#newPortfolioName").val(), currentBtcData.last);
+    $(".portfolioDisplay").append($("#newPortfolioName").val() +  "bought bitcoin at " + newPortfolio.initialValue);
+    $("#lossGainButton").last().click(function() {
       getCurrentBtcData();
-
-      $(".comparisonDisplay").append("loss/gain: "+ (currentBtcData.last - initialValue).toFixed(4));
+      $(".comparisonDisplay").append(newPortfolio.name + " loss/gain: "+ (currentBtcData.last - newPortfolio.initialValue).toFixed(4));
     })
   });
   //End Portfolio stuff
