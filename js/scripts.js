@@ -9,20 +9,31 @@ var getCurrentBtcData = function() {
     $("#btc-price").text(currentBtcData.last);
   })
 };
+//Portfolio stuff
 
-
-//This will eventually return actual bitcoin prices.
 var btcPrices = ["fakePrice1", "fakePrice2", "fakePrice3"];
 
-function displayLastPrice() {
-  for (i = 0; i<btcPrices.length; ++i) {
-    var index = i
-  }
-  return btcPrices[index];
-}
+// function displayLastPrice() {
+//   for (i = 0; i<btcPrices.length; ++i) {
+//     var index = i
+//   }
+//   return btcPrices[index];
+// }
 
 //UI Logic
 $(document).ready(function() {
+//Portfolio stuff
+  $("#portfolioButton").click(function(){
+    getCurrentBtcData();
+    var initialValue = currentBtcData.last;
+    $(".portfolioDisplay").append("Aaron bought bitcoin at " + initialValue);
+    $("#lossGainButton").click(function() {
+      getCurrentBtcData();
+
+      $(".comparisonDisplay").append("loss/gain: "+ (currentBtcData.last - initialValue).toFixed(4));
+    })
+  });
+  //End Portfolio stuff
   //This will call currentPrice from backend and update it on the page:
   getCurrentBtcData();
 
