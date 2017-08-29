@@ -16,6 +16,23 @@ iframe{
   margin-bottom: 16px;
   font-family: 'ABeeZee', sans-serif;
 }
+
+#map iframe{
+  border: none;
+  width: 98%;
+  min-height: 500px;
+  padding: 10px;
+  margin: 10px;
+}
+
+iframe{
+  width: 100%;
+  min-height: 500px;
+  border: #FFD54F 5px dotted;
+  padding: 10px;
+  margin: 10px;
+}
+
 .bg-amber {
   background-color: #263238;
 
@@ -49,4 +66,11 @@ iframe{
 }
 #converter {
   display: none;
+}
+input{
+  float: left;
+}
+
+#lossGainButton{
+  margin-top: 17px;
 }
