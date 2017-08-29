@@ -91,7 +91,6 @@ $(document).ready(function() {
   $("#converter-link").click(function() {
     getCurrentBtcData();
     $("#home").hide();
-    $("#graph").hide();
     $("#converter").show();
 
     $("#convert").click(function() {
@@ -116,7 +115,6 @@ $(document).ready(function() {
   });
   $("#graph-link").click(function(){
     historicBtcGraph();
-    $("#converter").hide();
     $("#home").hide();
     $("#graph").show();
   });
@@ -125,5 +123,14 @@ $(document).ready(function() {
     $("#converter").hide();
     $("#home").show();
   });
-
+// beginning of info paragraph slides
+  $("#showAbout").click(function(){
+    $(".about").slideToggle(700);
+  });
+  $("#blockChain").click(function(){
+    $(".blockChain").slideToggle(700);
+  });
+  $("#mining").click(function(){
+    $(".mining").slideToggle(700);
+  });
 });
