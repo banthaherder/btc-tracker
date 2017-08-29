@@ -70,7 +70,9 @@ iframe{
 input{
   float: left;
 }
-
+#graph {
+  display: none;
+}
 #lossGainButton{
   margin-top: 17px;
 }

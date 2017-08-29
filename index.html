@@ -4,7 +4,6 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="css/styles.css" rel="stylesheet" type="text/css"/>
     <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
     <script src="js/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css?family=ABeeZee|Ubuntu:700" rel="stylesheet">
@@ -39,11 +38,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class ="graph">
-            <p id ="generateGraph" class="btn btn-success">Generate Graph!</p>
-            <canvas id="myChart" width="400" height="400"></canvas>
-
           </div>
           <div class ="row">
             <div class="portfolioDisplay">
@@ -139,6 +133,16 @@
               </div>
             </div>
           </div>
+      </div>
+        <div class="col-lg-12" id="graph">
+        <div class="row">
+          <div class="col-lg-12">
+          <div class="graph">
+            <!-- <p id ="generateGraph" class="btn btn-success">Generate Graph!</p> -->
+            <canvas id="myChart" width="600" height="600"></canvas>
+          </div>
+        </div>
+        </div>
       </div>
     </div>
   </body>
