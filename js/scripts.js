@@ -116,6 +116,7 @@ $(document).ready(function() {
   });
   $("#graph-link").click(function(){
     historicBtcGraph();
+    $("#converter").hide();
     $("#home").hide();
     $("#graph").show();
   });
