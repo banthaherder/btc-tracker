@@ -1,13 +1,6 @@
 body {
   background: #CFD8DC;
 }
-iframe{
-  width: 100%;
-  min-height: 500px;
-  border: #FFD54F 5px dotted;
-  padding: 10px;
-  margin: 10px;
-}
 .nav {
   margin-bottom: 16px;
   font-family: 'Ubuntu', sans-serif;
@@ -28,7 +21,7 @@ iframe{
 iframe{
   width: 100%;
   min-height: 500px;
-  border: #FFD54F 5px dotted;
+  border: 7px dotted #FFC107;
   padding: 10px;
   margin: 10px;
 }
@@ -77,6 +70,28 @@ iframe{
   margin-top: 17px;
 }*/
 
+.about{
+  display: none;
+}
+.blockChain{
+  display: none;
+}
+.mining{
+  display: none;
+}
+.link:hover{
+  cursor: pointer;
+  color: #FFC107;
+}
+#showAbout{
+  width: 200px;
+}
+#blockChain{
+  width: 165px;
+}
+#mining{
+  width: 100px;
+}
 #portfolioChart{
   display:none;
     width: 100% !important;
