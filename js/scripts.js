@@ -76,7 +76,7 @@ var portfolioBtcGraph = function() {
         labels: times,
         datasets: [{
           label: 'Bitcoin Price',
-          data: values.reverse(),
+          data: values,
           backgroundColor: [
           '#263238'
         ],
