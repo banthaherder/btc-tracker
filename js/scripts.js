@@ -91,6 +91,7 @@ $(document).ready(function() {
   $("#converter-link").click(function() {
     getCurrentBtcData();
     $("#home").hide();
+    $("#graph").hide();
     $("#converter").show();
 
     $("#convert").click(function() {
