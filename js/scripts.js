@@ -5,9 +5,9 @@ var monthlyBtcData;
 
 var getCurrentBtcData = function() {
   // Uses jQuery GET method to retrieve the btc data
-  $.getJSON("https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD", function(data) {
+  $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD", function(data) {
     currentBtcData = data;
-    $("#btc-price").text(currentBtcData.last);
+    $("#btc-price").text(data.USD);
   })
 };
 var getMonthlyBtcData = function() {
