@@ -59,6 +59,45 @@ var historicBtcGraph = function() {
     });
   });
 };
+var values = [];
+var times = [];
+var portfolioBtcGraph = function() {
+  var date = Date.now();
+      times.push(date);
+      values.push(currentBtcData.last);
+
+    // console.log(data[0].time);
+    // Add a helper to format timestamp data
+    //Chart JS
+    var ctx = document.getElementById("portfolioChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: times,
+        datasets: [{
+          label: 'Bitcoin Price',
+          data: values,
+          backgroundColor: [
+          '#263238'
+        ],
+        borderColor: [
+          'rgba(255,99,132,1)'
+        ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero:false
+            }
+          }]
+        }
+      }
+    });
+    };
+
 
 //Portfolio stuff
 function Portfolio(name, initialValue, currentValue) {
@@ -77,14 +116,14 @@ $(document).ready(function() {
     event.preventDefault();
     getCurrentBtcData();
     var newPortfolio = new Portfolio ($("#newPortfolioName").val(), currentBtcData.last, currentBtcData.last);
-    $(".portfolioDisplay").append($("#newPortfolioName").val() +  "bought bitcoin at " + newPortfolio.initialValue);
-    $(".comparisonDisplay").show();
-
+    $("#portfolioName").append($("#newPortfolioName").val() +  " bought bitcoin at " + newPortfolio.initialValue);
+    $("#comparisonDisplay").show();
+    $("#portfolioChart").show();
     $("#lossGainButton").last().click(function() {
       getCurrentBtcData();
       newPortfolio.currentValueArray.push(currentBtcData.last);
-      $(".comparisonDisplay").append(newPortfolio.name + " loss/gain: "+ (currentBtcData.last - newPortfolio.initialValue).toFixed(4));
-      alert(newPortfolio.currentValueArray)
+      $("#lossGain").text(newPortfolio.name + " loss/gain: "+ (currentBtcData.last - newPortfolio.initialValue).toFixed(4));
+      portfolioBtcGraph();
     })
   });
   //End Portfolio stuff
