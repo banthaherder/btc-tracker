@@ -1,6 +1,25 @@
 body {
   background: #CFD8DC;
+  margin-bottom: 100px;
+  clear: both;
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 20px;
+  background-color: #263238;
+  color: grey;
+  text-align: center;
+  padding-top: 7px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 .nav {
   margin-bottom: 16px;
   font-family: 'Ubuntu', sans-serif;
