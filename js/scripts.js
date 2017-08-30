@@ -137,8 +137,9 @@ $(document).ready(function() {
 
   $("#converter-link").click(function() {
     getCurrentBtcData();
-    $("#home").hide();
     $("#converter").show();
+    $("#home").hide();
+    $("#graph").hide();
 
     $("#convert").click(function() {
       var usd = $("#usd").val();
@@ -163,21 +164,28 @@ $(document).ready(function() {
   $("#graph-link").click(function(){
     historicBtcGraph();
     $("#home").hide();
+    $("#converter").hide();
     $("#graph").show();
   });
   $("#home-link").click(function() {
+    $("#home").show();
     $("#graph").hide();
     $("#converter").hide();
-    $("#home").show();
   });
 // beginning of info paragraph slides
   $("#showAbout").click(function(){
     $(".about").slideToggle(700);
+    $(".blockChain").slideUp(500);
+    $(".mining").slideUp(500);
   });
   $("#blockChain").click(function(){
     $(".blockChain").slideToggle(700);
+    $(".about").slideUp(500);
+    $(".mining").slideUp(500);
   });
   $("#mining").click(function(){
     $(".mining").slideToggle(700);
+    $(".about").slideUp(500);
+    $(".blockChain").slideUp(500);
   });
 });
