@@ -62,8 +62,8 @@ var historicBtcGraph = function() {
 var values = [];
 var times = [];
 var portfolioBtcGraph = function() {
-  var date = Date.now();
-      times.push(date);
+  var date = new Date;
+      times.push(date.toLocaleTimeString());
       values.push(currentBtcData.USD);
 
     // console.log(data[0].time);
@@ -109,6 +109,11 @@ Portfolio.prototype.array = function(currentValue) {
   this.currentValueArray.push(currentValue)
 }
 
+function setIntervalAndExecute(fn, t) {
+    fn();
+    return(setInterval(fn, t));
+}
+
 //UI Logic
 $(document).ready(function() {
 //Portfolio stuff
@@ -116,17 +121,17 @@ $(document).ready(function() {
     event.preventDefault();
     getCurrentBtcData();
     var newPortfolio = new Portfolio ($("#newPortfolioName").val(), currentBtcData.USD, currentBtcData.USD);
-    $("#comparisonDisplay").append($("#newPortfolioName").val() +  " bought bitcoin at " + newPortfolio.initialValue);
     $("#comparisonDisplay").slideDown();
     $(".portfolioDisplay").hide()
-    $("#lossGainButton").last().click(function() {
+    // $("#lossGainButton").last().click(function() {
+      setIntervalAndExecute(function() {
       getCurrentBtcData();
       newPortfolio.currentValueArray.push(currentBtcData.USD);
-      $("#lossGainDisplay").text($("#newPortfolioName").val() +  " bought bitcoin at " + newPortfolio.initialValue + " loss/gain: "+ (currentBtcData.USD - newPortfolio.initialValue).toFixed(4));
+      $("#lossGainDisplay").text($("#newPortfolioName").val() +  " bought bitcoin at " + newPortfolio.initialValue.toFixed(2) + " loss/gain: "+ (currentBtcData.USD - newPortfolio.initialValue).toFixed(2));
       portfolioBtcGraph();
       $("#portfolioChart").show();
-
-    })
+    }, 10000);
+  // });
   });
   //End Portfolio stuff
   //This will call currentPrice from backend and update it on the page:
