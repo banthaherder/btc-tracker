@@ -134,7 +134,6 @@ $(document).ready(function() {
     var newPortfolio = new Portfolio ($("#newPortfolioName").val(), currentBtcData.USD, currentBtcData.USD);
     $("#comparisonDisplay").slideDown();
     $(".portfolioDisplay").hide()
-    // $("#lossGainButton").last().click(function() {
       setIntervalAndExecute(function() {
       getCurrentBtcData();
       newPortfolio.currentValueArray.push(currentBtcData.USD);
@@ -142,7 +141,6 @@ $(document).ready(function() {
       portfolioBtcGraph();
       $("#portfolioChart").show();
     }, 10000);
-  // });
   });
   //End Portfolio stuff
   //This will call currentPrice from backend and update it on the page:
