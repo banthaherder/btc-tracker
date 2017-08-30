@@ -37,7 +37,7 @@ html {
   margin: 10px;
 }
 
-.scrolloff {
+.stopScroll {
   pointer-events: none;
 }
 iframe{

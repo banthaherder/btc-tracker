@@ -245,17 +245,17 @@ $(document).ready(function() {
     $(".blockChain").slideUp(500);
   });
 
-  $('#map').addClass('scrolloff');
+  $('#map').addClass('stopScroll');
 
   $('#overlay').on("mouseup", function(){
-    $('#map').addClass('scrolloff');
+    $('#map').addClass('stopScroll');
   });
 
   $('#overlay').on("mousedown", function(){
-    $('#map').removeClass('scrolloff');
+    $('#map').removeClass('stopScroll');
   });
 
   $("#map").mouseleave(function (){
-    $('#map').addClass('scrolloff');
+    $('#map').addClass('stopScroll');
   });
 });
