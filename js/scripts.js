@@ -100,10 +100,15 @@ var portfolioBtcGraph = function() {
       options: {
         scales: {
           yAxes: [{
+            display: true,
             ticks: {
-              beginAtZero:false
+                beginAtZero: false,
+                stepSize: 2,
+                max: Math.floor(currentBtcData.USD + 10),
+                min: Math.floor(currentBtcData.USD - 10),
+                // max: Math.floor(currentBtcData.USD + 50)
             }
-          }]
+        }]
         }
       }
     });
