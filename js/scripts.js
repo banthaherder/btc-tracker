@@ -116,14 +116,16 @@ $(document).ready(function() {
     event.preventDefault();
     getCurrentBtcData();
     var newPortfolio = new Portfolio ($("#newPortfolioName").val(), currentBtcData.USD, currentBtcData.USD);
-    $("#portfolioName").append($("#newPortfolioName").val() +  " bought bitcoin at " + newPortfolio.initialValue);
-    $("#comparisonDisplay").show();
-    $("#portfolioChart").show();
+    $("#comparisonDisplay").append($("#newPortfolioName").val() +  " bought bitcoin at " + newPortfolio.initialValue);
+    $("#comparisonDisplay").slideDown();
+    $(".portfolioDisplay").hide()
     $("#lossGainButton").last().click(function() {
       getCurrentBtcData();
       newPortfolio.currentValueArray.push(currentBtcData.USD);
-      $("#lossGain").text(newPortfolio.name + " loss/gain: "+ (currentBtcData.USD - newPortfolio.initialValue).toFixed(4));
+      $("#lossGainDisplay").text($("#newPortfolioName").val() +  " bought bitcoin at " + newPortfolio.initialValue + " loss/gain: "+ (currentBtcData.USD - newPortfolio.initialValue).toFixed(4));
       portfolioBtcGraph();
+      $("#portfolioChart").show();
+
     })
   });
   //End Portfolio stuff
