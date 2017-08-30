@@ -140,6 +140,9 @@ $(document).ready(function() {
     $("#converter").show();
     $("#home").hide();
     $("#graph").hide();
+    $("#converter-link").addClass("active");
+    $("#home-link").removeClass("active");
+    $("#graph-link").removeClass("active");
 
     $("#convert").click(function() {
       var usd = $("#usd").val();
@@ -166,11 +169,17 @@ $(document).ready(function() {
     $("#home").hide();
     $("#converter").hide();
     $("#graph").show();
+    $("#converter-link").removeClass("active");
+    $("#home-link").removeClass("active");
+    $("#graph-link").addClass("active");
   });
   $("#home-link").click(function() {
     $("#home").show();
     $("#graph").hide();
     $("#converter").hide();
+    $("#converter-link").removeClass("active");
+    $("#home-link").addClass("active");
+    $("#graph-link").removeClass("active");
   });
 // beginning of info paragraph slides
   $("#showAbout").click(function(){
