@@ -145,6 +145,15 @@ $(document).ready(function() {
       $("#lossGainDisplay").text($("#newPortfolioName").val() +  " bought bitcoin at " + newPortfolio.initialValue.toFixed(2) + " loss/gain: "+ (currentBtcData.USD - newPortfolio.initialValue).toFixed(2));
       portfolioBtcGraph();
       $("#portfolioChart").show();
+      var count=10;
+      var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
+      function timer() {
+        count = count-1;
+        if (count <= 0) {
+          count = 10 ;
+        }
+        document.getElementById("timer").innerHTML=count + " seconds until bitcoin analysis"; // watch for spelling
+      }
     }, 10000);
   });
   //End Portfolio stuff
