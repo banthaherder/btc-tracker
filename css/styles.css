@@ -29,7 +29,7 @@ html {
   font-family: 'ABeeZee', sans-serif;
 }
 
-#map iframe{
+#mapCard iframe{
   border: none;
   width: 98%;
   min-height: 500px;
@@ -37,6 +37,9 @@ html {
   margin: 10px;
 }
 
+.scrolloff {
+  pointer-events: none;
+}
 iframe{
   width: 100%;
   min-height: 500px;
