@@ -1,18 +1,29 @@
 //Busniness logic
 var currentBtcData;
-var monthlyBtcData;
+var currentEthData;
+var currentLtcData;
 
 var getCurrentBtcData = function() {
   // Uses jQuery GET method to retrieve the btc data
   $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD", function(data) {
     currentBtcData = data;
-    $("#btc-price").text(data.USD);
+    $("#btc-price").text("1 BTC = $" + data.USD);
   })
 };
-var getMonthlyBtcData = function() {
+var getCurrentEthData = function() {
   // Uses jQuery GET method to retrieve the btc data
-  $.getJSON("https://apiv2.bitcoinaverage.com/indices/global/history/BTCUSD?period=daily&?format=json", function(data) {
-    monthlyBtcData = data;
+  $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD", function(data) {
+    currentEthData = data;
+    // alert(data.USD);
+    $("#eth-price").text("1 ETH = $" + data.USD);
+  })
+};
+var getCurrentLtcData = function() {
+  // Uses jQuery GET method to retrieve the btc data
+  $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=LTC&tsyms=USD", function(data) {
+    currentLtcData = data;
+    // alert(data.USD);
+    $("#ltc-price").text("1 LTC = $" + data.USD);
   })
 };
 
@@ -131,6 +142,8 @@ $(document).ready(function() {
   //End Portfolio stuff
   //This will call currentPrice from backend and update it on the page:
   getCurrentBtcData();
+  getCurrentEthData();
+  getCurrentLtcData();
 
   // Refreshes the BTC price data on the page
   $("refresh-data").click(function() {
@@ -165,6 +178,30 @@ $(document).ready(function() {
         $("#usd2").val((currentBtcData.USD * btc).toFixed(2));
       });
     });
+  });
+  $("#btc-ticker").click(function() {
+    $("#eth-ticker").removeClass("active-reverse");
+    $("#ltc-ticker").removeClass("active-reverse");
+    $("#btc-ticker").addClass("active-reverse");
+    $("#eth-price").hide();
+    $("#ltc-price").hide();
+    $("#btc-price").show();
+  });
+  $("#eth-ticker").click(function() {
+    $("#btc-ticker").removeClass("active-reverse");
+    $("#ltc-ticker").removeClass("active-reverse");
+    $("#eth-ticker").addClass("active-reverse");
+    $("#btc-price").hide();
+    $("#ltc-price").hide();
+    $("#eth-price").show();
+  });
+  $("#ltc-ticker").click(function() {
+    $("#btc-ticker").removeClass("active-reverse");
+    $("#eth-ticker").removeClass("active-reverse");
+    $("#ltc-ticker").addClass("active-reverse");
+    $("#btc-price").hide();
+    $("#eth-price").hide();
+    $("#ltc-price").show();
   });
   $("#graph-link").click(function(){
     historicBtcGraph();

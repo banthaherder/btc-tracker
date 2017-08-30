@@ -44,6 +44,24 @@ iframe{
   padding: 10px;
   margin: 10px;
 }
+.active-reverse {
+  color: #efefef !important;
+  background-color: #263238 !important;
+  border-color: #263238 !important;
+}
+.btn-secondary {
+  color: #263238;
+  background-color: #FFC107;
+  border-color: #FFC107;
+}
+.btn-secondary:hover {
+  color: #efefef;
+  background-color: #263238;
+  border-color: #263238;
+}
+.btn-group-vertical {
+  margin-left: 20px;
+}
 
 .bg-amber {
   background-color: #263238;
@@ -68,12 +86,17 @@ iframe{
 .nav-pills .nav-link-active {
   border-radius: 0 !important;
 }
+/*.switch-ticker {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}*/
 #price-converter-swapped {
   display: none;
 }
 #price-header {
   font-size: 65px;
   text-align: center;
+  padding-top: 10px;
   margin-bottom: 0px;
 }
 #converter {
@@ -120,4 +143,10 @@ iframe{
 
 #comparisonDisplay {
   display:none;
+}
+#eth-price {
+  display: none;
+}
+#ltc-price {
+  display: none;
 }

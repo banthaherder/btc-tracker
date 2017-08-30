@@ -37,13 +37,29 @@
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-body">
-                  <div>
-                    <p id="price-header">BTC = $<span id="btc-price"></span></p>
+                    <div class="row">
+                      <div class="col-lg-1">
+                        <div class="row">
+                          <div class="btn-group-vertical">
+                            <button id="btc-ticker" type="button" class="btn btn-secondary active-reverse">Bitcoin</button>
+                            <button id="eth-ticker" type="button" class="btn btn-secondary">Ethereum</button>
+                            <button id="ltc-ticker" type="button" class="btn btn-secondary">Litecoin</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-11">
+                        <p id="price-header">
+                          <span id="btc-price"></span>
+                          <span id="eth-price"></span>
+                          <span id="ltc-price"></span>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+
           <!-- WHAT IS BITCOIN -->
           <div class="row">
             <div class="col-lg-12">
