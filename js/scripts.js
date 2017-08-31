@@ -53,9 +53,9 @@ var historicBtcGraph = function() {
           '#263238'
         ],
         borderColor: [
-          'rgba(255,99,132,1)'
+          '#FFC107'
         ],
-          borderWidth: 1
+          borderWidth: 1.75
         }]
       },
       options: {
@@ -92,9 +92,9 @@ var portfolioBtcGraph = function() {
           '#263238'
         ],
         borderColor: [
-          'rgba(255,99,132,1)'
+          '#FFC107'
         ],
-          borderWidth: 1
+          borderWidth: 1.75
         }]
       },
       options: {
