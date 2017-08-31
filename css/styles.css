@@ -110,6 +110,7 @@ iframe{
 }*/
 #graph {
   display: none;
+  pointer-events: none;
 }
 /*#lossGainButton{
   margin-top: 17px;
