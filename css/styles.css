@@ -103,15 +103,26 @@ iframe{
 #price-converter-swapped {
   display: none;
 }
+
+#price-converter-swapped2 {
+  display: none;
+}
+
 #price-header {
   font-size: 65px;
   text-align: center;
   padding-top: 10px;
   margin-bottom: 0px;
 }
+
 #converter {
   display: none;
 }
+
+#converter2 {
+  display: none;
+}
+
 /*input{
   float: left;
 }*/
