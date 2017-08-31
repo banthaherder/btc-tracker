@@ -103,9 +103,9 @@ var portfolioBtcGraph = function() {
             display: true,
             ticks: {
                 beginAtZero: false,
-                stepSize: 2,
-                max: Math.floor(currentBtcData.USD + 10),
-                min: Math.floor(currentBtcData.USD - 10),
+                stepSize: 1,
+                max: Math.floor(currentBtcData.USD + 5),
+                min: Math.floor(currentBtcData.USD - 5),
                 // max: Math.floor(currentBtcData.USD + 50)
             }
         }]
