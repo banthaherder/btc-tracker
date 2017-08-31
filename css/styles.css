@@ -1,3 +1,14 @@
+/* Custom Font Rule Creation */
+@font-face {
+  font-family: 'ABeeZee';
+  src: URL('../fonts/ABeeZee-Regular.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: URL('../fonts/Ubuntu-Bold.ttf');
+}
 body {
   background: #CFD8DC;
   margin-bottom: 100px;
@@ -12,7 +23,7 @@ body {
   background-color: #263238;
   color: grey;
   text-align: center;
-  padding-top: 7px;
+  padding-top: 10px;
 }
 
 html {
@@ -96,32 +107,42 @@ iframe{
 .nav-pills .nav-link-active {
   border-radius: 0 !important;
 }
-/*.switch-ticker {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}*/
+
 #price-converter-swapped {
   display: none;
 }
+
+#price-converter-swapped2 {
+  display: none;
+}
+
+#price-converter-swapped3 {
+  display: none;
+}
+
 #price-header {
   font-size: 65px;
   text-align: center;
   padding-top: 10px;
   margin-bottom: 0px;
 }
+
 #converter {
   display: none;
 }
-/*input{
-  float: left;
-}*/
+
+#converter2 {
+  display: none;
+}
+
+#converter3 {
+  display: none;
+}
+
 #graph {
   display: none;
   pointer-events: none;
 }
-/*#lossGainButton{
-  margin-top: 17px;
-}*/
 
 .about{
   display: none;
@@ -152,6 +173,10 @@ iframe{
   width: 100% !important;
   max-width: 800px;
   height: auto !important;
+}
+
+#logo li li:hover {
+  background-color:black;
 }
 
 #comparisonDisplay {

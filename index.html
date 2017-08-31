@@ -4,9 +4,8 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="css/styles.css" rel="stylesheet" type="text/css"/>
     <script src="js/jquery-3.2.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+     <script type="text/javascript" src="js/Chart.js"></script>
     <script src="js/scripts.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=ABeeZee|Ubuntu:700" rel="stylesheet">
     <link rel="shortcut icon" href="img/bitcoin_icon2.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BTC Tracker</title>
@@ -28,6 +27,8 @@
           <li class="nav-item">
             <p class="nav-link" id="converter-link">Portfolio</p>
           </li>
+          <li id="logo"><img src = "img/logo.png"></li>
+
         </div>
       </div>
     </ul>
@@ -114,10 +115,10 @@
               <div class="card">
                 <div class="card-body">
                   <div id="calc">
-                    <h1>USD to BTC Convert</h1>
+                    <h1>USD to BTC Converter</h1>
                     <form id="price-converter">
                       <div class="form-group row">
-                        <label for="btc" class="col-sm-4 col-form-label">USD:</label>
+                        <label for="usd" class="col-sm-4 col-form-label">USD:</label>
                         <div class="col-sm-8">
                           <input type="text" id="usd" class="form-control" placeholder="USD">
                         </div>
@@ -145,6 +146,82 @@
                     </form>
                     <button class="btn btn-warning" id="swap" type="button">Swap</button>
                     <button class="btn btn-warning" id="convert" type="button">Convert</button>
+                  </div>
+                </div>
+              </div>
+              <!-- ETH Converter -->
+              <div class="card">
+                <div class="card-body">
+                  <div id="calc2">
+                    <h1>USD to ETH Converter</h1>
+                    <form id="price-converter2">
+                      <div class="form-group row">
+                        <label for="usd" class="col-sm-4 col-form-label">USD:</label>
+                        <div class="col-sm-8">
+                          <input type="text" id="usd3" class="form-control" placeholder="USD">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="eth" class="col-sm-4 col-form-label">Ethereum:</label>
+                        <div class="col-sm-8">
+                          <input type="text" id="eth" class="form-control" placeholder="ETH">
+                        </div>
+                      </div>
+                    </form>
+                    <form id="price-converter-swapped2">
+                      <div class="form-group row">
+                        <label for="eth2" class="col-sm-4 col-form-label">Ethereum:</label>
+                        <div class="col-sm-8">
+                          <input type="text" id="eth2" class="form-control" placeholder="ETH">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="usd4" class="col-sm-4 col-form-label">USD:</label>
+                        <div class="col-sm-8">
+                          <input type="text" id="usd4" class="form-control" placeholder="USD">
+                        </div>
+                      </div>
+                    </form>
+                    <button class="btn btn-warning" id="swap2" type="button">Swap</button>
+                    <button class="btn btn-warning" id="convert2" type="button">Convert</button>
+                  </div>
+                </div>
+              </div>
+            <!-- Lite Coin Converter -->
+              <div class="card">
+                <div class="card-body">
+                  <div id="calc3">
+                    <h1>USD to LTC Converter</h1>
+                    <form id="price-converter3">
+                      <div class="form-group row">
+                        <label for="usd" class="col-sm-4 col-form-label">USD:</label>
+                        <div class="col-sm-8">
+                          <input type="text" id="usd5" class="form-control" placeholder="USD">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="ltc" class="col-sm-4 col-form-label">Litecoin:</label>
+                        <div class="col-sm-8">
+                          <input type="text" id="ltc" class="form-control" placeholder="LTC">
+                        </div>
+                      </div>
+                    </form>
+                    <form id="price-converter-swapped3">
+                      <div class="form-group row">
+                        <label for="ltc2" class="col-sm-4 col-form-label">Lite Coin:</label>
+                        <div class="col-sm-8">
+                          <input type="text" id="ltc2" class="form-control" placeholder="LTC">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="usd6" class="col-sm-4 col-form-label">USD:</label>
+                        <div class="col-sm-8">
+                          <input type="text" id="usd6" class="form-control" placeholder="USD">
+                        </div>
+                      </div>
+                    </form>
+                    <button class="btn btn-warning" id="swap3" type="button">Swap</button>
+                    <button class="btn btn-warning" id="convert3" type="button">Convert</button>
                   </div>
                 </div>
               </div>
@@ -193,7 +270,7 @@
     </div>
     <!-- Footer -->
    <footer class="footer">
-     <p>Help us improve our website, <a href="mailto:dawson.mortenson@gmail.com">Send us an email!</a> | (555) 555-5555 | 400 SW 6th Ave #800, Portland, OR 97204 | © D.A.N.K Inc.</p>
+     <p>Help us improve our website, <a href="mailto:dawson.mortenson@gmail.com">Send us an email!</a> | (555) 555-5555 | 400 SW 6th Ave #800, Portland, OR 97204 | © D. A. N. K. Inc.</p>
    </footer>
   </body>
 </html>

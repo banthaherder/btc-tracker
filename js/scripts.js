@@ -182,7 +182,6 @@ $(document).ready(function() {
       $("#btc").val((usd/currentBtcData.USD).toFixed(8));
     });
     $("#swap").click(function() {
-      // Kind of redunant. If anyone has a better way to clear form fields!
       $("#btc").val("");
       $("#btc2").val("");
       $("#usd").val("");
@@ -194,6 +193,44 @@ $(document).ready(function() {
       $("#convert").click(function() {
         var btc = $("#btc2").val();
         $("#usd2").val((currentBtcData.USD * btc).toFixed(2));
+      });
+    });
+    // ETH Converter ----------------
+    $("#convert2").click(function() {
+      var usd = $("#usd3").val();
+      $("#eth").val((usd/currentEthData.USD).toFixed(8));
+    });
+    $("#swap2").click(function() {
+      $("#eth").val("");
+      $("#eth2").val("");
+      $("#usd3").val("");
+      $("#usd4").val("");
+
+      $("#price-converter2").toggle();
+      $("#price-converter-swapped2").toggle();
+
+      $("#convert2").click(function() {
+        var eth = $("#eth2").val();
+        $("#usd4").val((currentEthData.USD * eth).toFixed(2));
+      });
+    });
+    // LTC Converter ----------------
+    $("#convert3").click(function() {
+      var usd = $("#usd5").val();
+      $("#ltc").val((usd/currentLtcData.USD).toFixed(8));
+    });
+    $("#swap3").click(function() {
+      $("#ltc").val("");
+      $("#ltc2").val("");
+      $("#usd5").val("");
+      $("#usd6").val("");
+
+      $("#price-converter3").toggle();
+      $("#price-converter-swapped3").toggle();
+
+      $("#convert3").click(function() {
+        var ltc = $("#ltc2").val();
+        $("#usd6").val((currentLtcData.USD * ltc).toFixed(2));
       });
     });
   });
