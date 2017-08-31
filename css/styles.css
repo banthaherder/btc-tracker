@@ -23,7 +23,7 @@ body {
   background-color: #263238;
   color: grey;
   text-align: center;
-  padding-top: 7px;
+  padding-top: 10px;
 }
 
 html {
@@ -107,15 +107,16 @@ iframe{
 .nav-pills .nav-link-active {
   border-radius: 0 !important;
 }
-/*.switch-ticker {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}*/
+
 #price-converter-swapped {
   display: none;
 }
 
 #price-converter-swapped2 {
+  display: none;
+}
+
+#price-converter-swapped3 {
   display: none;
 }
 
@@ -134,16 +135,14 @@ iframe{
   display: none;
 }
 
-/*input{
-  float: left;
-}*/
+#converter3 {
+  display: none;
+}
+
 #graph {
   display: none;
   pointer-events: none;
 }
-/*#lossGainButton{
-  margin-top: 17px;
-}*/
 
 .about{
   display: none;
