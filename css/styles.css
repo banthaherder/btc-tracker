@@ -128,9 +128,11 @@ iframe{
   cursor: pointer;
   color: #FFC107;
 }
+
 #showAbout{
-  width: 200px;
+  width: 220px;
 }
+
 #blockChain{
   width: 165px;
 }
@@ -139,9 +141,9 @@ iframe{
 }
 #portfolioChart{
   display:none;
-    width: 100% !important;
-    max-width: 800px;
-    height: auto !important;
+  width: 100% !important;
+  max-width: 800px;
+  height: auto !important;
 }
 
 #comparisonDisplay {
