@@ -80,39 +80,39 @@ var portfolioBtcGraph = function() {
     // console.log(data[0].time);
     // Add a helper to format timestamp data
     //Chart JS
-    var ctx = document.getElementById("portfolioChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: times,
-        datasets: [{
-          label: 'Bitcoin Price',
-          data: values,
-          backgroundColor: [
-          '#263238'
-        ],
-        borderColor: [
-          '#FFC107'
-        ],
-          borderWidth: 1.75
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-            display: true,
-            ticks: {
-                beginAtZero: false,
-                stepSize: 1,
-                max: Math.floor(currentBtcData.USD + 5),
-                min: Math.floor(currentBtcData.USD - 5),
-                // max: Math.floor(currentBtcData.USD + 50)
-            }
-        }]
-        }
+  var ctx = document.getElementById("portfolioChart").getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: times,
+      datasets: [{
+        label: 'Bitcoin Price',
+        data: values,
+        backgroundColor: [
+        '#263238'
+      ],
+      borderColor: [
+        '#FFC107'
+      ],
+        borderWidth: 1.75
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          display: true,
+          ticks: {
+              beginAtZero: false,
+              stepSize: 1,
+              max: Math.floor(currentBtcData.USD + 5),
+              min: Math.floor(currentBtcData.USD - 5),
+              // max: Math.floor(currentBtcData.USD + 50)
+          }
+      }]
       }
-    });
-    };
+    }
+  });
+};
 
 
 //Portfolio stuff
