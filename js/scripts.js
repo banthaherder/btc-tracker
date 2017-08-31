@@ -14,7 +14,6 @@ var getCurrentEthData = function() {
   // Uses jQuery GET method to retrieve the btc data
   $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD", function(data) {
     currentEthData = data;
-    // alert(data.USD);
     $("#eth-price").text("1 ETH = $" + data.USD);
   })
 };
@@ -22,7 +21,6 @@ var getCurrentLtcData = function() {
   // Uses jQuery GET method to retrieve the btc data
   $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=LTC&tsyms=USD", function(data) {
     currentLtcData = data;
-    // alert(data.USD);
     $("#ltc-price").text("1 LTC = $" + data.USD);
   })
 };
@@ -32,14 +30,11 @@ var historicBtcGraph = function() {
   var averages = [];
   $.getJSON("https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=100&e=CCCAGG", function(data) {
     monthlyBtcData = data["Data"];
-    // console.log(data[0].average);
     $.each(data["Data"], function(key, value){
       date = new Date(value.time * 1000);
       times.push(date.toDateString());
       averages.push(value.close);
     });
-    // console.log(data[0].time);
-    // Add a helper to format timestamp data
     //Chart JS
     var ctx = document.getElementById("myChart").getContext('2d');
     var myChart = new Chart(ctx, {
@@ -77,8 +72,6 @@ var portfolioBtcGraph = function() {
       times.push(date.toLocaleTimeString());
       values.push(currentBtcData.USD);
 
-    // console.log(data[0].time);
-    // Add a helper to format timestamp data
     //Chart JS
   var ctx = document.getElementById("portfolioChart").getContext('2d');
   var myChart = new Chart(ctx, {
@@ -106,7 +99,6 @@ var portfolioBtcGraph = function() {
               stepSize: 1,
               max: Math.floor(currentBtcData.USD + 5),
               min: Math.floor(currentBtcData.USD - 5),
-              // max: Math.floor(currentBtcData.USD + 50)
           }
       }]
       }
