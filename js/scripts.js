@@ -145,14 +145,15 @@ $(document).ready(function() {
       $("#lossGainDisplay").text($("#newPortfolioName").val() +  " bought bitcoin at " + newPortfolio.initialValue.toFixed(2) + " loss/gain: "+ (currentBtcData.USD - newPortfolio.initialValue).toFixed(2));
       portfolioBtcGraph();
       $("#portfolioChart").show();
-      var count=10;
-      var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
+      var count = 10;
+      var counter = setInterval(timer, 1000);
       function timer() {
         count = count-1;
         if (count <= 0) {
-          count = 10 ;
+          clearInterval(counter);
+          counter = setInterval(begin, 1000);
         }
-        document.getElementById("timer").innerHTML=count + " seconds until bitcoin analysis"; // watch for spelling
+        document.getElementById("timer").innerHTML = count + " seconds until bitcoin analysis";
       }
     }, 10000);
   });
