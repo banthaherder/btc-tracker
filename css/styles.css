@@ -165,6 +165,10 @@ iframe{
   height: auto !important;
 }
 
+#logo li li:hover {
+  background-color:black;
+}
+
 #comparisonDisplay {
   display:none;
 }
