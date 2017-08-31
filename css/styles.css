@@ -1,3 +1,14 @@
+/* Custom Font Rule Creation */
+@font-face {
+  font-family: 'ABeeZee';
+  src: URL('../fonts/ABeeZee-Regular.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: URL('../fonts/Ubuntu-Bold.ttf');
+}
 body {
   background: #CFD8DC;
   margin-bottom: 100px;
