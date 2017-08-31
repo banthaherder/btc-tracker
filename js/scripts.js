@@ -151,7 +151,7 @@ $(document).ready(function() {
         count = count-1;
         if (count <= 0) {
           clearInterval(counter);
-          counter = setInterval(begin, 1000);
+          timer = setInterval(counter, 1000);
         }
         document.getElementById("timer").innerHTML = count + " seconds until bitcoin analysis";
       }

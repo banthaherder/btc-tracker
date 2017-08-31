@@ -8,6 +8,7 @@
     <script src="js/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css?family=ABeeZee|Ubuntu:700" rel="stylesheet">
     <link rel="shortcut icon" href="img/bitcoin_icon2.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BTC Tracker</title>
   </head>
   <body>
@@ -15,6 +16,9 @@
     <ul class="nav nav-pills bg-amber">
       <div class="container">
         <div class="row nav-fill">
+          <li>
+            <img src="img/wallet_icon.png" id="icon">
+          </li>
           <li class="nav-item">
             <p class="nav-link active" id="home-link">BTC Tracker</p>
           </li>
@@ -24,6 +28,8 @@
           <li class="nav-item">
             <p class="nav-link" id="converter-link">Portfolio</p>
           </li>
+          <li id="logo"><img src = "img/logo.png"></li>
+
         </div>
       </div>
     </ul>
@@ -145,10 +151,13 @@
                 </div>
               </div>
             </div>
+            <!--PORTFOLIO-->
             <div class="col-lg-8">
               <div class="card">
                 <div class="card-body">
                   <div class="portfolioDisplay">
+                    <h3>Welcome to your portfolio!</h3>
+                    <p>Enter your name, and <em>we'll do the rest!</em></p>
                     <form id="newPortfolio" class ="form-group">
                       <div class="form-group">
                         <input type="text" id="newPortfolioName" class="form-control">

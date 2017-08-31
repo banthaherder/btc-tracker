@@ -20,6 +20,13 @@ html {
   min-height: 100%;
 }
 
+#icon {
+  max-width: 100px;
+  max-height: 100px;
+  padding: 5px;
+  margin: 5px;
+}
+
 .nav {
   margin-bottom: 16px;
   font-family: 'Ubuntu', sans-serif;
@@ -110,6 +117,7 @@ iframe{
 }*/
 #graph {
   display: none;
+  pointer-events: none;
 }
 /*#lossGainButton{
   margin-top: 17px;
@@ -144,6 +152,10 @@ iframe{
   width: 100% !important;
   max-width: 800px;
   height: auto !important;
+}
+
+#logo li li:hover {
+  background-color:black;
 }
 
 #comparisonDisplay {
