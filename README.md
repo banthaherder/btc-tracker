@@ -22,7 +22,7 @@ The Cryptocurrency Tracker website provides the current price of Bitcoin, Ethere
 * Open the index.html in a web browser.
 
 #### For a Live Version of The Site
-* [Click Here](https://codingtea17.github.io/btc-tracker)
+* [Click Here](https://banthaherder.github.io/btc-tracker)
 
 ## Technologies Used
 
